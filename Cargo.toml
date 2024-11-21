@@ -1,0 +1,25 @@
+[package]
+name = "monitor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argon2 = "0.5.3"
+async-trait = "0.1.83"
+chrono = {version = "0.4.38", features = ["serde"]}
+dotenv = "0.15.0"
+jsonwebtoken = "9.3.0"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+sqlx = { version = "0.8.2", features = ["runtime-async-std-native-tls", "postgres", "chrono", "uuid"] }
+uuid = { version = "1.10.0", features = ["v4", "serde"] }
+# validator = { version = "0.18.1", features = ["derive"] }
+validator = { version = "0.16.1", features = ["derive"] }
+axum = "0.7.7"
+axum-extra = {version = "0.9.4", features = ["cookie"]}
+tokio = { version = "1.40.0", features = ["full"] }
+tower = "0.5.1"
+time = "0.3.36"
+tower-http = { version = "0.6.1", features = ["cors", "trace"] }
+tracing-subscriber = "0.3.18"
+lettre = "0.11.9"
